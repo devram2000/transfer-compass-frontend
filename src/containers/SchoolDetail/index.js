@@ -38,11 +38,11 @@ export default function SchoolDetail() {
   };
 
   return (
-    <Container>
+    <Container className="mb-5">
       {data && (
         <>
           <Row className="mt-4">
-            <Col>
+            <Col className="p-0">
               <h3>{data.name}</h3>
             </Col>
           </Row>
@@ -59,15 +59,41 @@ export default function SchoolDetail() {
               md={6}
               className="text-center text-md-end mt-4 mt-md-0 p-0"
             >
-              <Card className="d-flex align-items-center justify-content-center p-4 h-100 ms-md-5">
-                <h5>Get your own AI-generated report with transfer advice</h5>
-                <Button onClick={handleOnGetStarted} className="px-4 py-2 mt-3">
-                  Get Started
-                </Button>
-              </Card>
+            <div className="d-flex align-items-center justify-content-center h-100">
+              <Card className="p-4 ms-md-5">
+                  <h6 className="text-center">Interested in an AI-generated report with personalized transfer application advice?</h6>
+                  <Button onClick={handleOnGetStarted} className="px-4 py-2 mt-3">
+                    Get Started
+                  </Button>
+                </Card>
+              </div>
             </Col>
           </Row>
           <Row className="mt-4">
+            <Card>
+              <Card.Body>
+                <Card.Title className="mb-4">Transfer Details</Card.Title>
+                <ListGroup variant="flush">
+                  {Object.keys(data.transferDetails).map(
+                    (transferDetailKey) => (
+                      <ListGroup.Item key={transferDetailKey}>
+                        <Row className="d-flex justify-content-between">
+                          <Col xs={4}>
+                            {camelCaseToSpaceSeparated(transferDetailKey)}
+                          </Col>
+                          <Col xs={8} className="text-end fw-bold">
+                            {data.transferDetails[transferDetailKey]}
+                          </Col>
+                        </Row>
+                      </ListGroup.Item>
+                    )
+                  )}
+                </ListGroup>
+              </Card.Body>
+            </Card>
+          </Row>
+
+          <Row className="mt-5">
             <Card>
               <Card.Body>
                 <Card.Title className="mb-4">
@@ -83,29 +109,6 @@ export default function SchoolDetail() {
                           </Col>
                           <Col xs={8} className="text-end fw-bold">
                             {data.applicationRequirements[appRequirementKey]}
-                          </Col>
-                        </Row>
-                      </ListGroup.Item>
-                    )
-                  )}
-                </ListGroup>
-              </Card.Body>
-            </Card>
-          </Row>
-          <Row className="mt-5">
-            <Card>
-              <Card.Body>
-                <Card.Title className="mb-4">Transfer Details</Card.Title>
-                <ListGroup variant="flush">
-                  {Object.keys(data.transferDetails).map(
-                    (transferDetailKey) => (
-                      <ListGroup.Item key={transferDetailKey}>
-                        <Row className="d-flex justify-content-between">
-                          <Col xs={4}>
-                            {camelCaseToSpaceSeparated(transferDetailKey)}
-                          </Col>
-                          <Col xs={8} className="text-end fw-bold">
-                            {data.transferDetails[transferDetailKey]}
                           </Col>
                         </Row>
                       </ListGroup.Item>

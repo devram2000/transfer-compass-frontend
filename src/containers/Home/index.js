@@ -56,7 +56,8 @@ export default function Home() {
       {total > 0 && (
         <Row className="mt-4">
           <Col md={3} sm={12} className="d-flex align-items-center">
-            <p className="h6">{total} schools</p>
+            {/* <p className="h6">{total} schools</p> */}
+            <p className="h5">Transfer University Profiles</p>
           </Col>
 					<Col md={{ span: 6, offset: 3 }} sm={12} className="d-flex align-items-center">
 						<SearchInput setQueryString={setQueryString} />

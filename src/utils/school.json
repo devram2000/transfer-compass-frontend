@@ -12,7 +12,7 @@
 			"NotRequired": "Interview"
 		},
 		"transferDetails": {
-			"upcomingTransferDeadline": "06/01/24",
+			"upcomingTransferDeadline": "03/01/24",
 			"termsForTransfer": "Fall, Spring, Summer",
 			"minimumCredits": 30,
 			"minimumGPA": 2.5,

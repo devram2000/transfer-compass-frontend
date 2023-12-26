@@ -36,10 +36,10 @@ export default function SummaryInfo({
               </Link>
             </Col>
             <Col sm={6}>
-              <p className="h6">{acceptanceRate} Acceptance Rate</p>
+              <p className="h6"><b>{acceptanceRate}</b> Acceptance Rate</p>
             </Col>
             <Col sm={6}>
-              <p className="h6">{applicationDeadline} Application Deadline</p>
+              <p className="h6"><b>{applicationDeadline}</b> Application Deadline</p>
             </Col>
           </Row>
         </Col>

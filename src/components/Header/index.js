@@ -16,7 +16,7 @@ export default function Header() {
                         <p className='h6'>Home</p>
                     </Nav.Link>
                     <Nav.Link href="/" className='d-flex align-items-center me-4'>
-                        <p className='h6'>Schools</p>
+                        <p className='h6'>School Profiles</p>
                     </Nav.Link>
                     <Nav.Link href="https://transfercompass.com/contact-us/" className='d-flex align-items-center'>
                         <p className='h6'>Contact Us</p>
