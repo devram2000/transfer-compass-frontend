@@ -1,0 +1,26 @@
+{
+	"university": {
+		"id": "univ123",
+		"name": "Tech University",
+		"pictureUrl": "https://collegevine.imgix.net/4f44a70d-648c-4349-b95e-9f06ce8d4010.jpg?w=170&h=270&fit=crop&crop=edges&auto=format",
+		"acceptanceRate": "49%",
+		"applicationRequirements": {
+			"RequiredOfAll": "High school transcript, College transcript",
+			"RecommendedOfAll": "Letters of Recommendation",
+			"RecommendedOfSome": "SAT/ACT scores",
+			"RequiredOfSome": "Portfolio for art programs",
+			"NotRequired": "Interview"
+		},
+		"transferDetails": {
+			"upcomingTransferDeadline": "06/01/24",
+			"termsForTransfer": "Fall, Spring, Summer",
+			"minimumCredits": 30,
+			"minimumGPA": 2.5,
+			"lowestGradeForTransfer": "C",
+			"maxCreditsFromTwoYear": 60,
+			"maxCreditsFromFourYear": 90,
+			"minCreditsAtUniversity": 30,
+			"otherPolicies": ""
+		}
+	}
+}

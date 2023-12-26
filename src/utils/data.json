@@ -1,0 +1,77 @@
+{
+    "universities": [
+        {
+            "id": "univ123",
+            "name": "University of Virginia",
+            "pictureUrl": "https://collegevine.imgix.net/4f44a70d-648c-4349-b95e-9f06ce8d4010.jpg?w=170&h=270&fit=crop&crop=edges&auto=format",
+            "acceptanceRate": "0.3495%",
+            "applicationDeadline": "02/19/24"
+        },
+        {
+            "id": "univ124",
+            "name": "Dartmouth College",
+            "pictureUrl": "https://collegevine.imgix.net/8c92981b-ed0c-4313-bdce-86550029d3f9.jpg?w=170&h=270&fit=crop&crop=edges&auto=format",
+            "acceptanceRate": "49%",
+            "applicationDeadline": "02/19/24"
+        },
+        {
+            "id": "univ125",
+            "name": "University of Virginia",
+            "pictureUrl": "https://collegevine.imgix.net/4f44a70d-648c-4349-b95e-9f06ce8d4010.jpg?w=170&h=270&fit=crop&crop=edges&auto=format",
+            "acceptanceRate": "0.3495%",
+            "applicationDeadline": "02/19/24"
+        },
+        {
+            "id": "univ126",
+            "name": "Dartmouth College",
+            "pictureUrl": "https://collegevine.imgix.net/8c92981b-ed0c-4313-bdce-86550029d3f9.jpg?w=170&h=270&fit=crop&crop=edges&auto=format",
+            "acceptanceRate": "49%",
+            "applicationDeadline": "02/19/24"
+        },
+        {
+            "id": "univ127",
+            "name": "University of Virginia",
+            "pictureUrl": "https://collegevine.imgix.net/4f44a70d-648c-4349-b95e-9f06ce8d4010.jpg?w=170&h=270&fit=crop&crop=edges&auto=format",
+            "acceptanceRate": "0.3495%",
+            "applicationDeadline": "02/19/24"
+        },
+        {
+            "id": "univ128",
+            "name": "Dartmouth College",
+            "pictureUrl": "https://collegevine.imgix.net/8c92981b-ed0c-4313-bdce-86550029d3f9.jpg?w=170&h=270&fit=crop&crop=edges&auto=format",
+            "acceptanceRate": "49%",
+            "applicationDeadline": "02/19/24"
+        },
+        {
+            "id": "univ129",
+            "name": "University of Virginia",
+            "pictureUrl": "https://collegevine.imgix.net/4f44a70d-648c-4349-b95e-9f06ce8d4010.jpg?w=170&h=270&fit=crop&crop=edges&auto=format",
+            "acceptanceRate": "0.3495%",
+            "applicationDeadline": "02/19/24"
+        },
+        {
+            "id": "univ130",
+            "name": "Dartmouth College",
+            "pictureUrl": "https://collegevine.imgix.net/8c92981b-ed0c-4313-bdce-86550029d3f9.jpg?w=170&h=270&fit=crop&crop=edges&auto=format",
+            "acceptanceRate": "49%",
+            "applicationDeadline": "02/19/24"
+        },
+        {
+            "id": "univ1131",
+            "name": "University of Virginia",
+            "pictureUrl": "https://collegevine.imgix.net/4f44a70d-648c-4349-b95e-9f06ce8d4010.jpg?w=170&h=270&fit=crop&crop=edges&auto=format",
+            "acceptanceRate": "0.3495%",
+            "applicationDeadline": "02/19/24"
+        },
+        {
+            "id": "univ132",
+            "name": "Dartmouth College",
+            "pictureUrl": "https://collegevine.imgix.net/8c92981b-ed0c-4313-bdce-86550029d3f9.jpg?w=170&h=270&fit=crop&crop=edges&auto=format",
+            "acceptanceRate": "49%",
+            "applicationDeadline": "02/19/24"
+        }
+    ],
+    "total": 200,
+    "page": 2,
+    "limit": 10
+}
