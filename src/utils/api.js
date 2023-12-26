@@ -14,7 +14,6 @@ const getHeaders = () => {
 export const fetchSchoolsList = async (queryString, page, limit) => {
     const defaultHeaders = getHeaders();
 
-    console.log(">>>");
     return mockData;
 
     // try {
