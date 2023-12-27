@@ -29,7 +29,7 @@ export default function SummaryInfo({
           <Image src={pictureUrl} className="mt-4 mt-md-0" />
         </Col>
         <Col sm={12} md={10} className="p-4 d-flex align-items-center">
-          <Row>
+          <Row className="w-100">
             <Col sm={12} className="mb-4">
               <Link className="h2 text-body card-title" to={`/${id}`}>
                 {name}
