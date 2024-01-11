@@ -9,9 +9,11 @@ import "./index.css";
 export default function SummaryInfo({
   id,
   name,
-  pictureUrl,
-  acceptanceRate,
-  applicationDeadline,
+  image_url: pictureUrl,
+  summary: {
+    acceptance_rate: acceptanceRate,
+    application_deadline: applicationDeadline
+  },
 }) {
   const navigate = useNavigate();
 
