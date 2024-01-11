@@ -29,11 +29,11 @@ export const fetchSchoolsList = async (queryString, page, limit) => {
     }
 }
 
-export const fetchSchoolInfo = async (schoolId) => {
+export const fetchSchoolInfo = async (uid) => {
     const defaultHeaders = getHeaders();
 
     try {
-        const response = await fetch(`${API_URL}/universities/details/${schoolId}`, {
+        const response = await fetch(`${API_URL}/universities/details/${uid}`, {
             method: 'GET',
             headers: defaultHeaders
         });

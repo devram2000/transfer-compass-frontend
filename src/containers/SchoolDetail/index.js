@@ -15,12 +15,12 @@ import { fetchSchoolInfo } from "../../utils/api";
 import { camelCaseToSpaceSeparated } from "../../utils/helper";
 
 export default function SchoolDetail() {
-  const { id } = useParams();
+  const { uid } = useParams();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetchSchoolInfo(id)
+    fetchSchoolInfo(uid)
       .then((res) => {
         if (res) {
           setData({
@@ -37,7 +37,7 @@ export default function SchoolDetail() {
       .finally(() => {
         setLoading(false);
       });
-  }, [id]);
+  }, [uid]);
 
   const handleOnGetStarted = () => {
     window.location.href = "https://transfercompass.com/start/";

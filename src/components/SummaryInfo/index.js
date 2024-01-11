@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./index.css";
 
 export default function SummaryInfo({
-  id,
+  uid,
   name,
   image_url: pictureUrl,
   summary: {
@@ -18,7 +18,7 @@ export default function SummaryInfo({
   const navigate = useNavigate();
 
   const handleCardClick = () => {
-    navigate(`/${id}`);
+    navigate(`/${uid}`);
   };
 
   return (
@@ -34,7 +34,7 @@ export default function SummaryInfo({
         <Col sm={12} md={10} className="p-4 d-flex align-items-center">
           <Row className="w-100">
             <Col sm={12} className="mb-4">
-              <Link className="h2 text-body card-title" to={`/${id}`}>
+              <Link className="h2 text-body card-title" to={`/${uid}`}>
                 {name}
               </Link>
             </Col>
