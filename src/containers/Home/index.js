@@ -11,7 +11,7 @@ import SearchInput from "../../components/SearchBox";
 export default function Home() {
   const [schools, setSchools] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [total, setTotal] = useState(1);
+  const [total, setTotal] = useState(0);
   const [pageNum, setPageNum] = useState(1);
   const [queryString, setQueryString] = useState("");
   const pageSize = 10;
@@ -47,9 +47,10 @@ export default function Home() {
     isMounted.current && setLoading(true);
     fetchSchoolsList(queryString, pageNum, pageSize)
       .then((response) => {
-        const { universities, total } = response;
+        const { universities, total, page } = response;
         setSchools([...schools, ...universities]);
         setTotal(total);
+        setPageNum(page);
       })
       .catch((ex) => {
         console.log("Error Happening: ", ex.message);
@@ -64,7 +65,6 @@ export default function Home() {
     <Container>
       <Row className="mt-4">
         <Col md={3} sm={12} className="d-flex align-items-center">
-          {/* <p className="h6">{total} schools</p> */}
           <p className="h5">Transfer University Profiles</p>
         </Col>
         <Col
