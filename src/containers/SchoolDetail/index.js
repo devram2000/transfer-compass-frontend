@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
+
 import { useParams } from "react-router-dom";
-import { fetchSchoolInfo } from "../../utils/api";
 import {
   Container,
   Col,
@@ -11,18 +11,24 @@ import {
   Button,
 } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
+import { fetchSchoolInfo } from "../../utils/api";
 import { camelCaseToSpaceSeparated } from "../../utils/helper";
 
 export default function SchoolDetail() {
-  const { id } = useParams();
+  const { uid } = useParams();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetchSchoolInfo(id)
+    fetchSchoolInfo(uid)
       .then((res) => {
         if (res) {
-          setData(res.university);
+          setData({
+            ...res,
+            pictureUrl: res.image_url,
+            transferDetails: res.summary.transfer_details || {},
+            applicationRequirements: res.summary.application_requirements || {},
+          });
         }
       })
       .catch((ex) => {
@@ -31,7 +37,7 @@ export default function SchoolDetail() {
       .finally(() => {
         setLoading(false);
       });
-  }, [id]);
+  }, [uid]);
 
   const handleOnGetStarted = () => {
     window.location.href = "https://transfercompass.com/start/";

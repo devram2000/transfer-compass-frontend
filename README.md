@@ -2,6 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Installation
+
+Install node modules by executing the following:
+```
+npm install
+```
+
+Create `.env` file and setup environments.
+
 ## Available Scripts
 
 In the project directory, you can run:

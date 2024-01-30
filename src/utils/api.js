@@ -1,6 +1,6 @@
 import { getCookie } from "./cookie";
-import mockData from "./data.json";
-import SingleData from "./school.json";
+
+const API_URL = process.env.REACT_APP_API_URL;
 
 const getHeaders = () => {
     const accessToken = getCookie("appToken");
@@ -14,38 +14,35 @@ const getHeaders = () => {
 export const fetchSchoolsList = async (queryString, page, limit) => {
     const defaultHeaders = getHeaders();
 
-    return mockData;
-
-    // try {
-    //     const response = await fetch(`/api/universities/search?query=${queryString}&page=${page}&limit=${limit}`, {
-    //         method: 'GET',
-    //         headers: defaultHeaders
-    //     });
-    //     const data = await response.json();
-    //     if (!response.ok) {
-    //         throw new Error(data.error);
-    //     }
-    //     return data;
-    // } catch (ex) {
-    //     return [];
-    // }
+    try {
+        const response = await fetch(`${API_URL}/universities/search?query=${queryString}&page=${page}&limit=${limit}`, {
+            method: 'GET',
+            headers: defaultHeaders
+        });
+        const data = await response.json();
+        if (!response.ok) {
+            throw new Error(data.error);
+        }
+        return data;
+    } catch (ex) {
+        return [];
+    }
 }
 
-export const fetchSchoolInfo = async (schoolId) => {
+export const fetchSchoolInfo = async (uid) => {
     const defaultHeaders = getHeaders();
 
-    return SingleData;
-    // try {
-    //     const response = await fetch(`/api/universities/details/${schoolId}`, {
-    //         method: 'GET',
-    //         headers: defaultHeaders
-    //     });
-    //     const data = await response.json();
-    //     if (!response.ok) {
-    //         throw new Error(data.error);
-    //     }
-    //     return data;
-    // } catch (ex) {
-    //     return null;
-    // }
+    try {
+        const response = await fetch(`${API_URL}/universities/details/${uid}`, {
+            method: 'GET',
+            headers: defaultHeaders
+        });
+        const data = await response.json();
+        if (!response.ok) {
+            throw new Error(data.error);
+        }
+        return data;
+    } catch (ex) {
+        return null;
+    }
 }

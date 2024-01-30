@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
+
 import {InputGroup, FormControl, Button} from 'react-bootstrap';
 
-export default function SearchInput({ setQueryString }) {
+export default function SearchInput({ onInput }) {
 	const [inputValue, setInputValue] = useState("");
 	const handleChange = (e) => {
 		setInputValue(e.target.value);
 	}
 
 	const handleSearch = () => {
-		setQueryString(inputValue)
+		onInput(inputValue)
 	}
 
   return (

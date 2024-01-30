@@ -3,19 +3,22 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
 import { Link, useNavigate } from "react-router-dom";
+
 import "./index.css";
 
 export default function SummaryInfo({
-  id,
+  uid,
   name,
-  pictureUrl,
-  acceptanceRate,
-  applicationDeadline,
+  image_url: pictureUrl,
+  summary: {
+    acceptance_rate: acceptanceRate,
+    application_deadline: applicationDeadline
+  },
 }) {
   const navigate = useNavigate();
 
   const handleCardClick = () => {
-    navigate(`/${id}`);
+    navigate(`/${uid}`);
   };
 
   return (
@@ -26,12 +29,12 @@ export default function SummaryInfo({
           md={2}
           className="d-flex justify-content-center align-items-center justify-content-md-start align-items-md-start"
         >
-          <Image src={pictureUrl} className="mt-4 mt-md-0" />
+          <Image src={pictureUrl} className="mt-4 mt-md-0" width="100%" />
         </Col>
         <Col sm={12} md={10} className="p-4 d-flex align-items-center">
           <Row className="w-100">
             <Col sm={12} className="mb-4">
-              <Link className="h2 text-body card-title" to={`/${id}`}>
+              <Link className="h2 text-body card-title" to={`/${uid}`}>
                 {name}
               </Link>
             </Col>
