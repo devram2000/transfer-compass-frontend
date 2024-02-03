@@ -13,6 +13,8 @@ import {
 import Spinner from "react-bootstrap/Spinner";
 import { fetchSchoolInfo } from "../../utils/api";
 import { camelCaseToSpaceSeparated } from "../../utils/helper";
+import "./index.css";
+
 
 export default function SchoolDetail() {
   const { uid } = useParams();
@@ -44,12 +46,12 @@ export default function SchoolDetail() {
   };
 
   return (
-    <Container className="mb-5">
+    <Container className="body mb-5">
       {data && (
         <>
           <Row className="mt-4">
             <Col className="p-0">
-              <h3>{data.name}</h3>
+              <h4>{data.name}</h4>
             </Col>
           </Row>
           <Row className="mt-4">
@@ -58,7 +60,7 @@ export default function SchoolDetail() {
               md={6}
               className="d-flex justify-content-center justify-content-md-start p-0"
             >
-              <Image src={data.pictureUrl} />
+              <Image src={data.pictureUrl} className="image-icon" />
             </Col>
             <Col
               sm={12}

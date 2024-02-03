@@ -12,7 +12,9 @@ export default function SummaryInfo({
   image_url: pictureUrl,
   summary: {
     acceptance_rate: acceptanceRate,
-    application_deadline: applicationDeadline
+    transfer_details: {
+      upcoming_transfer_deadline: applicationDeadline,
+    },
   },
 }) {
   const navigate = useNavigate();
@@ -29,20 +31,20 @@ export default function SummaryInfo({
           md={2}
           className="d-flex justify-content-center align-items-center justify-content-md-start align-items-md-start"
         >
-          <Image src={pictureUrl} className="mt-4 mt-md-0" width="100%" />
+          <Image src={pictureUrl} alt={name} className="m-2 image-icon" />
         </Col>
         <Col sm={12} md={10} className="p-4 d-flex align-items-center">
           <Row className="w-100">
             <Col sm={12} className="mb-4">
-              <Link className="h2 text-body card-title" to={`/${uid}`}>
+              <Link className="h text-body card-title" to={`/${uid}`}>
                 {name}
               </Link>
             </Col>
             <Col sm={6}>
-              <p className="h6"><b>{acceptanceRate}</b> Acceptance Rate</p>
+              <p className="details"><b>{acceptanceRate}</b> Acceptance Rate</p>
             </Col>
             <Col sm={6}>
-              <p className="h6"><b>{applicationDeadline}</b> Application Deadline</p>
+              <p className="details"><b>{applicationDeadline}</b> Application Deadline</p>
             </Col>
           </Row>
         </Col>
