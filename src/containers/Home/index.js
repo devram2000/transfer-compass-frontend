@@ -14,7 +14,7 @@ export default function Home() {
   const [total, setTotal] = useState(0);
   const [pageNum, setPageNum] = useState(1);
   const [queryString, setQueryString] = useState("");
-  const pageSize = 10;
+  const pageSize = 30;
   const isMounted = useRef(false);
 
   const scrollListener = (e) => {
@@ -65,7 +65,7 @@ export default function Home() {
     <Container>
       <Row className="mt-4">
         <Col md={3} sm={12} className="d-flex align-items-center">
-          <p className="h5">Transfer University Profiles</p>
+          <p className="h6">Transfer University Profiles</p>
         </Col>
         <Col
           md={{ span: 6, offset: 3 }}

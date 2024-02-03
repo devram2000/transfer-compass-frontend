@@ -1,3 +1,7 @@
 .header {
     z-index: 1020;
 }
+
+.subhead {
+    font-size: 15px;
+}
