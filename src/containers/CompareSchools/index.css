@@ -1,0 +1,10 @@
+/* Custom class for image padding */
+.image-icon {
+  padding: 10px;
+  width: 150px;
+  height: 150px;
+}
+
+.body {
+  font-size: 14px;
+}
