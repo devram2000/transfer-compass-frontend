@@ -1,35 +1,8 @@
 /* Custom class for image padding */
 .image-icon {
-    padding: 10px; 
-    width: 150px;
-    height: auto; 
+  object-fit: contain;
 }
 
-.details {
-    font-size:14px;
-}
-
-.card-title {
-    text-decoration: none;
-    font-size: 1rem; /* Adjusted font size */
-}
-
-@media (max-width: 1000px) {
-    /* Adjustments for mobile screens */
-    .image-icon {
-        padding: 10px; 
-        width: 100px;
-    }
-
-    .card-title {
-        font-size: 1rem; /* Smaller font size on mobile */
-    }
-}
-@media (max-width: 767px) {
-    /* Adjustments for mobile screens */
-    .image-icon {
-        padding: 10px; 
-        width: 150px;
-    }
-
+.pointer {
+  cursor: pointer;
 }

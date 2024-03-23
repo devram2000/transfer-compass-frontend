@@ -1,27 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import {InputGroup, FormControl, Button} from 'react-bootstrap';
+import { Form, InputGroup, FormControl, Button } from "react-bootstrap";
 
 export default function SearchInput({ onInput }) {
-	const [inputValue, setInputValue] = useState("");
-	const handleChange = (e) => {
-		setInputValue(e.target.value);
-	}
+  const [inputValue, setInputValue] = useState("");
+  const handleChange = (e) => {
+    setInputValue(e.target.value);
+  };
 
-	const handleSearch = () => {
-		onInput(inputValue)
-	}
+  const handleSearch = (e) => {
+    e.preventDefault();
+    onInput(inputValue);
+  };
 
   return (
-    <InputGroup>
-      <FormControl
-        placeholder="Search..."
-        aria-label="Search..."
-        aria-describedby="basic-addon2"
-        value={inputValue}
-        onChange={handleChange}
-      />
-			<Button onClick={handleSearch}>Search</Button>
-    </InputGroup>
+    <Form onSubmit={(e) => handleSearch(e)}>
+      <InputGroup>
+        <FormControl
+          placeholder="Search..."
+          aria-label="Search..."
+          aria-describedby="basic-addon2"
+          size="sm"
+          value={inputValue}
+          onChange={handleChange}
+        />
+        <Button size="sm" type="submit">
+          Search
+        </Button>
+      </InputGroup>
+    </Form>
   );
-};
+}

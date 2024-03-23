@@ -1,10 +1,8 @@
 /* Custom class for image padding */
 .image-icon {
-    padding: 10px; 
-    width: 150px;
-    height: 150px; 
+  object-fit: contain;
 }
 
 .body {
-    font-size: 14px;
+  font-size: 14px;
 }

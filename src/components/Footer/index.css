@@ -1,0 +1,19 @@
+ul {
+  list-style: none;
+}
+li {
+  margin-bottom: 10px;
+  font-size: smaller;
+  font-weight: 500;
+}
+
+.footerp1 {
+  background-color: #003049;
+  color: white;
+}
+
+.footerp2 {
+  background-color: #1d3557;
+  font-size: smaller;
+  color: white;
+}

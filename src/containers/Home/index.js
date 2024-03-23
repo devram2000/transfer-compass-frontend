@@ -7,6 +7,7 @@ import Spinner from "react-bootstrap/Spinner";
 import SummaryInfo from "../../components/SummaryInfo";
 import { fetchSchoolsList } from "../../utils/api";
 import SearchInput from "../../components/SearchBox";
+import Form from "react-bootstrap/Form";
 
 export default function Home() {
   const [schools, setSchools] = useState([]);
@@ -62,27 +63,41 @@ export default function Home() {
   }, [pageNum, queryString]);
 
   return (
-    <Container>
-      <Row className="mt-4">
-        <Col md={3} sm={12} className="d-flex align-items-center">
-          <p className="h6">Transfer University Profiles</p>
-        </Col>
-        <Col
-          md={{ span: 6, offset: 3 }}
-          sm={12}
-          className="d-flex align-items-center"
-        >
+    <Container className="w-75 mb-5">
+      <h1 className="text-center fs-2 fw-bolder m-4">
+        Transfer University Profiles
+      </h1>
+      <Row className="mt-5 g-3">
+        <Col md={4} sm={12} className="">
           <SearchInput onInput={handleInput} />
         </Col>
+        <Col className="d-md-flex justify-content-end">
+          <Row>
+            <Col className="d-flex">
+              <Form.Select size="sm" name="sortby" id="sortby">
+                <option value="recommended">Recommended</option>
+                <option value="op1">Saab</option>
+              </Form.Select>
+            </Col>
+            <Col>
+              <Form.Select size="sm" name="filterby" id="filterby">
+                <option value="location">Location</option>
+                <option value="op1">Saab</option>
+              </Form.Select>
+            </Col>
+          </Row>
+        </Col>
       </Row>
-      {schools.map((school) => (
-        <Row key={`ui-${school.id}`}>
+      <Row lg={3} md={2} xs={1} className="gy-3">
+        {schools.map((school) => (
           <Col>
             <SummaryInfo {...school} />
           </Col>
-        </Row>
-      ))}
-      {loading && <Spinner animation="border" />}
+        ))}
+      </Row>
+      <div className="d-flex justify-content-center align-items-center pt-5">
+        {loading && <Spinner animation="border" className="wx-auto" />}
+      </div>
     </Container>
   );
 }
