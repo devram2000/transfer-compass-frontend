@@ -4,12 +4,10 @@
   width: 150px;
   height: 150px;
 }
-<<<<<<< Updated upstream
 
 .body {
   font-size: 14px;
 }
-=======
 .image-small {
   width: 50px;
   margin-right: 10px;
@@ -32,4 +30,3 @@ td {
   transform: scale(1.05);
   font-weight: bold;
 }
->>>>>>> Stashed changes
